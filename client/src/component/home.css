@@ -1,4 +1,9 @@
 .heading{
-    height: 900px;
-    background: url(bg1.jpg) no-repeat;
+    height: 500px;
+    background-color: lightblue;
+}
+.container{
+    background-color: red;
+    height: 500px;
+    width: 300px;
 }

@@ -1,20 +1,22 @@
 'use client'
 
-import React from 'react'
+import React from 'react';
+// import SignUp from './Signup';
+// import Login from './Login';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 
 const menuItems = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'About',
-    href: '#',
+    href: '/about',
   },
   {
     name: 'Contact',
-    href: '#',
+    href: '/contact',
   },
 ]
 
@@ -27,7 +29,7 @@ export default function Navbar() {
 
   return (
     <div className="relative w-full bg-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+      <div className="mx-auto my-4 flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         <div className="inline-flex items-center space-x-2">
           <img src="logo.png" alt="" width="30px" />
           <span className="font-bold">MediScan</span>
@@ -54,7 +56,9 @@ export default function Navbar() {
             type="button"
             className="rounded-md bg-transparent px-3 py-2 text-sm font-semibold text-black hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Sign In
+            <a href="/signup">
+              Sign Up
+            </a>
           </button>
           <button
             type="button"
