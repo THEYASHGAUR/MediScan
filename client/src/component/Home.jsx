@@ -62,6 +62,8 @@ export default function Home() {
                 </div>
                 <div className="container bg-slate-500 max-w-6xl rounded-xl flex justify-center font-white border-spacing-4 h-96 mx-10 my-32 ml-60 ">
                     <h1>Enter the Symptom:</h1>
+                    
+
 
                 </div>
             </div>
