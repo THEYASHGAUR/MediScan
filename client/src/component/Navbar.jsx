@@ -1,21 +1,21 @@
 'use client'
 
 import React from 'react';
-import SignUp from './Signup';
+// import SignUp from './Signup';
 // import Login from './Login';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 
 const menuItems = [
   {
-    name: 'Home',
+    name: "Home",
     href: '/',
   },
   {
-    name: 'About',
+    name: "About",
     href: '/about',
   },
   {
-    name: 'Contact',
+    name: "Contact",
     href: '/contact',
   },
 ]
@@ -59,13 +59,16 @@ export default function Navbar() {
             <a href="/signup">
               Sign Up
             </a>
-            
+
           </button>
           <button
             type="button"
             className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
           >
-            Log In
+            <a href="/login">
+              Log In
+            </a>
+
           </button>
         </div>
         <div className="lg:hidden">

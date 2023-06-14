@@ -1,14 +1,20 @@
 'use client'
 
-import Footer from "./Footer"
+import Footer from "./Footer";
+import { useState } from "react";
+import InputButton from "./InputButton"
 import Navbar from "./Navbar"
 
 export default function Home() {
+    const [selectedOption, setSelectedOption] = useState('');
 
+    const handleOptionChange = (event) => {
+        setSelectedOption(event.target.value);
+    };
+    
     return (
         <>
-        <Navbar />
-        <div className="container"></div>
+            <Navbar />
             <div className="justify-center">
                 <div className="relative w-full mb-10">
 
@@ -65,14 +71,67 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="container bg-slate-500 max-w-6xl rounded-xl flex justify-center font-white border-spacing-4 h-96 mx-10 my-32 ml-60 ">
+                <div className="container bg-gray-100 max-w-7xl items-center rounded-xl flex flex-col gap-3 justify-center   font-white border-spacing-4 h-96 mx-10 my-32 ml-48 ">
                     <h1>Enter the Symptom:</h1>
+                    <InputButton />
+
+                    {/* radio buttons */}
+                    <div className="flex">
+                        <label className="mr-2">
+                            <input
+                                type="radio"
+                                value="male"
+                                checked={selectedOption === 'male'}
+                                onChange={handleOptionChange}
+                                className="mr-1"
+                            />
+                            Male
+                        </label>
+                        <label>
+                            <input
+                                type="radio"
+                                value="female"
+                                checked={selectedOption === 'female'}
+                                onChange={handleOptionChange}
+                                className="mr-1"
+                            />
+                            Female
+                        </label>
+
+                    </div>
                     
+                    <div className="relative w-full lg:max-w-sm">
+                        <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
+                            <option>Enter your symptom:1</option>
+                            <option>Cough</option>
+                            <option>Headache</option>
+                            <option>Low Fever</option>
+                            <option>High Fever</option>
+                        </select>
+                    </div>
+                    <div className="relative w-full lg:max-w-sm">
+                        <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
+                            <option>Enter your symptom:2</option>
+                            <option>Cough</option>
+                            <option>Headache</option>
+                            <option>Low Fever</option>
+                            <option>High Fever</option>
+                        </select>
+                    </div>
+                    <div className="relative w-full lg:max-w-sm">
+                        <select className="w-full p-2.5 text-gray-500 bg-white border rounded-md shadow-sm outline-none appearance-none focus:border-indigo-600">
+                            <option>Enter your symptom:3</option>
+                            <option>Migrane</option>
+                            <option>Dry Cough</option>
+                            <option>swelling</option>
+                            <option>Backpain</option>
+                        </select>
+                    </div>
 
-
+                    <button className="flex bg-slate-600 h-10 rounded-xl w-36 items-center justify-center text-white">Submit</button>
                 </div>
             </div>
-        <Footer />
+            <Footer />
         </>
     )
 }
