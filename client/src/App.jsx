@@ -1,6 +1,6 @@
 
-import Footer from "./component/Footer";
-import Navbar from "./component/Navbar";
+// import Footer from "./component/Footer";
+// import Navbar from "./component/Navbar";
 import Home from './component/Home';
 import  Contact  from "./component/contact";
 import About from "./component/About";
@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-    <Navbar /> 
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,11 +21,6 @@ function App() {
         <Route path="*" element={<Error/>} />
       </Routes>
     </BrowserRouter>
-    <Footer />
-
-
-
-    {/* <Contact /> */}
      
      
     </>

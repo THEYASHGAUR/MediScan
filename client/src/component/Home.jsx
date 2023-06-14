@@ -1,9 +1,14 @@
 'use client'
 
+import Footer from "./Footer"
+import Navbar from "./Navbar"
+
 export default function Home() {
 
     return (
         <>
+        <Navbar />
+        <div className="container"></div>
             <div className="justify-center">
                 <div className="relative w-full mb-10">
 
@@ -67,6 +72,7 @@ export default function Home() {
 
                 </div>
             </div>
+        <Footer />
         </>
     )
 }

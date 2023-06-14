@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-// import SignUp from './Signup';
+import SignUp from './Signup';
 // import Login from './Login';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 
@@ -59,6 +59,7 @@ export default function Navbar() {
             <a href="/signup">
               Sign Up
             </a>
+            
           </button>
           <button
             type="button"
