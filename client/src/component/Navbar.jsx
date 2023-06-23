@@ -3,16 +3,18 @@
 import React from 'react';
 // import SignUp from './Signup';
 // import Login from './Login';
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
+import { X, ChevronRight } from 'lucide-react'
+import ArticleIcon from '@mui/icons-material/Article';
+// import { NavLink } from 'react-router-dom';
 
 const menuItems = [
   {
     name: "Home",
-    href: '/',
+    href: "/",
   },
   {
     name: "About",
-    href: '/about',
+    href: "/about",
   },
   {
     name: "Contact",
@@ -35,21 +37,21 @@ export default function Navbar() {
           <span className="font-bold">MediScan</span>
         </div>
         <div className="hidden grow items-start lg:flex">
-          <ul className="ml-12 inline-flex space-x-8">
+          {/* <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
                 <a
-                  href={item.href}
+                  to={item.href}
                   className="inline-flex items-center text-sm font-semibold text-gray-800 hover:text-gray-900"
                 >
                   {item.name}
-                  <span>
-                    <ChevronDown className="ml-2 h-4 w-4" />
-                  </span>
                 </a>
               </li>
             ))}
-          </ul>
+          </ul> */}
+          <button className='m-5'><a href="/">Home</a></button>
+          <button className='m-5'><a href="/about">About</a></button>
+          <button className='m-5'><a href="/contact">Contact</a></button>
         </div>
         <div className="hidden space-x-2 lg:block">
           <button
@@ -72,7 +74,7 @@ export default function Navbar() {
           </button>
         </div>
         <div className="lg:hidden">
-          <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
+          <ArticleIcon onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
